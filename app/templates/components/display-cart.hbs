@@ -1,3 +1,8 @@
-{{#each shoppingCart.items as |item|}}
-  {{item.title}} -- {{item.cost}}<br>
-{{/each}}
+{{#if shoppingCart.items}}
+
+  <h2>Current items in your cart:</h2>
+
+  {{#each shoppingCart.items as |item|}}
+    {{item.title}} -- {{item.cost}}<br>
+  {{/each}}
+{{/if}}
