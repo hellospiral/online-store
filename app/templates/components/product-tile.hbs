@@ -1,6 +1,6 @@
-<h3>{{product.title}}</h3>
-<img src={{product.image}}>
-<h5>{{product.description}}</h5>
-<h4>{{product.cost}}</h4>
+{{#link-to 'item' product.id}}
+  <h3>{{product.title}}</h3>
+  <img src={{product.image}}>
+{{/link-to}}
 
-<button class="btn btn-primary" {{action 'addToCart' product}}>Add to Cart</button>
+<!-- <button class="btn btn-primary" {{action 'addToCart' product}}>Add to Cart</button> -->
