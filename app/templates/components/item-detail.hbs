@@ -1,8 +1,14 @@
 <div class="container">
   <h2>{{product.title}}</h2>
-  <img src={{product.image}}>
-  <h5>{{product.description}}</h5>
+  <div class="row">
+  <img class="col col-md col-3" src={{product.image}}>
+    <div class="container shoeContainer">
+      <h5>{{product.description}}</h5>
+    </div>
+  </div>
   <h4>{{product.cost}}</h4>
 
   <button class="btn btn-primary" {{action 'addToCart' product}}>Add to Cart</button>
+
+  {{new-review product=product save2="save3"}}
 </div>
