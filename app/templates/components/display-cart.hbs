@@ -5,4 +5,5 @@
   {{#each shoppingCart.items as |item|}}
     {{item.title}} -- {{item.cost}}<br>
   {{/each}}
+  <h2>Total: ${{shoppingCart.totalDisplay}}</h2>
 {{/if}}
