@@ -6,8 +6,8 @@
     {{#each model as |product|}}
       <li class="list-group-item">
         {{product.title}}
-        <button class="btn btn-primary btn-lg" {{action 'edit'}}>Edit</button>
-        <button class="btn btn-danger btn-lg" {{action 'delete' product}}>Delete</button>
+        {{edit-product class="crudButtons"product=product edit="edit"}}
+        <button class="btn btn-danger btn-sm crudButtons" {{action 'delete' product}}>Delete</button>
       </li>
     {{/each}}
   </ul>
@@ -17,3 +17,6 @@
   <h3>Add New Product:</h3>
   {{new-product save='save' product=product}}
 </div> -->
+
+
+<!-- <button class="btn btn-primary btn-lg" {{action 'edit'}}>Edit</button> -->
