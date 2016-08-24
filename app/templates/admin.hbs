@@ -1,0 +1,19 @@
+<h4>Logged in as admin</h4>
+
+<div class="currentProduct">
+  <ul class="list-group">
+    <h3>Current Products:</h3>
+    {{#each model as |product|}}
+      <li class="list-group-item">
+        {{product.title}}
+        <button class="btn btn-primary btn-lg" {{action 'edit'}}>Edit</button>
+        <button class="btn btn-danger btn-lg" {{action 'delete' product}}>Delete</button>
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+<!-- <div class="newProduct">
+  <h3>Add New Product:</h3>
+  {{new-product save='save' product=product}}
+</div> -->
