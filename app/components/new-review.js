@@ -13,7 +13,8 @@ export default Ember.Component.extend({
         username: this.get('username'),
         comment: this.get('comment'),
         rating: parseInt(this.get('rating')),
-        product: this.get('product')
+        product: this.get('product'),
+        timestamp: Date.now()
       };
       this.set('addNewReview', false);
       this.sendAction('save2', params);

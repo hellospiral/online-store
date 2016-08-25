@@ -1,7 +1,26 @@
-
-
+<!-- {{#power-select
+  selected=howToSort
+  options=sortingOptions
+  onchange=(action "chooseSortBy")
+  as |item|
+}}
+  {{item}}
+{{/power-select}} -->
 <ul>
   {{#each sortedReviews as |review|}}
-    <li>"{{review.comment}}" by {{review.username}}. Rating: {{review.rating}}</li>
+  <li>"{{review.comment}}" by {{review.username}}. Rating: {{review.rating}}
+    {{#if review.timestamp}}
+      {{moment-calendar review.timestamp}}
+    {{/if}}
+  </li>
   {{/each}}
 </ul>
+
+<!-- {{#if sortDesc}} -->
+<!-- {{else}}
+  <ul>
+    {{#each sortedAscending as |review|}}
+      <li>"{{review.comment}}" by {{review.username}}. Rating: {{review.rating}}</li>
+    {{/each}}
+  </ul>
+{{/if}} -->
