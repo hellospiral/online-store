@@ -11,7 +11,7 @@
 
   {{#each sortedReviews as |review|}}
     <blockquote>
-      <h3>{{review.rating}} stars</h3>
+      <h3 class="yellowStars">{{review-rating-stars review}}</h3>
       <p>"{{review.comment}}"</p>
       <footer>{{review.username}} <p>{{moment-calendar review.timestamp}}</p></footer>
     </blockquote>

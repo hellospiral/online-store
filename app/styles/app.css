@@ -37,3 +37,7 @@ body {
 .noItemsText {
   padding: 15px;
 }
+
+.yellowStars {
+  color: #fdec03;
+}
