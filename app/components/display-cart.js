@@ -6,6 +6,12 @@ export default Ember.Component.extend({
   actions: {
     displayTotal() {
       this.get('shoppingCart').total();
+    },
+
+    toStore() {
+      console.log('toStore ran');
+      this.sendAction('toStore');
+
     }
   }
 });

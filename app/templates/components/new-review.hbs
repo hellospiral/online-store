@@ -4,22 +4,22 @@
       <form>
         <div class="form-group">
           <label for="username">Username</label>
-          {{input value=username id="username"}}
+          {{input class="form-control" value=username id="username"}}
         </div>
 
         <div class="form-group">
           <label for="comment">Comment</label>
-          {{input value=comment id="comment"}}
+          {{input class="form-control" value=comment id="comment"}}
         </div>
 
         <div class="form-group">
           <label for="rating">Rating</label>
-          {{input value=rating id="rating"}}
+          {{input class="form-control" value=rating id="rating"}}
         </div>
 
-        <button {{action 'save1'}}>Save</button>
+        <button class="btn btn-primary" {{action 'save1'}}>Save</button>
       </form>
     </div>
 {{else}}
-    <button {{action 'reviewFormShow'}}>New Review</button>
+    <button class="btn btn-primary" {{action 'reviewFormShow'}}>New Review</button>
 {{/if}}

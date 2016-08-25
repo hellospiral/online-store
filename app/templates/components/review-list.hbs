@@ -1,29 +1,19 @@
-<!-- {{#power-select
-  selected=howToSort
-  options=sortingOptions
-  onchange=(action "chooseSortBy")
-  as |item|
-}}
+<!-- {{#power-select options=sortingOptions onchange=(action "chooseSortBy") as |item|}}
   {{item}}
 {{/power-select}} -->
-{{#if product.reviews}}
-  <h3>Average rating: {{averageRating}}</h3>
-{{/if}}
-<ul>
-  {{#each sortedReviews as |review|}}
-  <li>"{{review.comment}}" by {{review.username}}. Rating: {{review.rating}}
-    {{#if review.timestamp}}
-      {{moment-calendar review.timestamp}}
-    {{/if}}
-  </li>
-  {{/each}}
-</ul>
 
-<!-- {{#if sortDesc}} -->
-<!-- {{else}}
-  <ul>
-    {{#each sortedAscending as |review|}}
-      <li>"{{review.comment}}" by {{review.username}}. Rating: {{review.rating}}</li>
-    {{/each}}
-  </ul>
-{{/if}} -->
+
+  {{#if product.reviews}}
+    <h2>Product Reviews:</h2>
+    <h3>Average rating: {{averageRating}}</h3>
+    <hr>
+  {{/if}}
+
+  {{#each sortedReviews as |review|}}
+    <blockquote>
+      <h3>{{review.rating}} stars</h3>
+      <p>"{{review.comment}}"</p>
+      <footer>{{review.username}} <p>{{moment-calendar review.timestamp}}</p></footer>
+    </blockquote>
+    <hr>
+  {{/each}}

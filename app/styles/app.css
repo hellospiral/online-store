@@ -1,7 +1,39 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 .crudButtons {
   display: inline;
 }
 
 .shoeContainer {
   width: 30%;
+}
+
+.smallImage {
+  width: 250px;
+  height: auto;
+}
+
+.productCard {
+  border: 4px;
+}
+
+.shoeTitleText {
+  height: 52px;
+  margin: 10px;
+  text-align: center;
+}
+
+.shoeCard {
+  height: 362px;
+}
+
+.shoePic {
+  display: block;
+  margin: auto;
+}
+
+.noItemsText {
+  padding: 15px;
 }

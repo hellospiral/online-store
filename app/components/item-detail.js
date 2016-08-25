@@ -14,6 +14,7 @@ export default Ember.Component.extend({
     addToCart(item) {
       this.get('shoppingCart').add(item);
       this.get('shoppingCart').total();
+      this.sendAction('goToCart');
     },
 
     save3(params) {

@@ -1,9 +1,34 @@
 {{#if shoppingCart.items}}
+  <table style="width: 75%">
+    <thead>
+      <th colspan="2">
+        <h1>Your cart:</h1>
+      </th>
+      <th>
+        <h4>Price</h4>
+      </th>
+    </thead>
+    <tbody>
+      {{#each shoppingCart.items as |item|}}
+      <hr>
+        <tr>
+          <td><img class="smallImage" src={{item.image}}></td>
+          <td><h4>{{item.title}}</h4></td>
+          <td><h4>{{item.cost}}</h4></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <hr>
 
-  <h2>Current items in your cart:</h2>
-
-  {{#each shoppingCart.items as |item|}}
-    {{item.title}} -- {{item.cost}}<br>
-  {{/each}}
   <h2>Total: ${{shoppingCart.totalDisplay}}</h2>
+
+  <button class="btn btn-lg btn-primary">Checkout</button>
+
+{{else}}
+  <div class="container">
+    <h2>There are no items in your cart</h2>
+    <h5 class="noItemsText">If your cart is still empty after you’ve added items, it may have something to do with cookies in your browser’s settings. (Strange, we know.) Please enable cookies then try again.</h5>
+    <button {{action 'toStore'}} class="btn btn-primary btn-lg">Keep Shopping</button>
+  </div>
 {{/if}}

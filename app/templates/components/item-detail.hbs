@@ -1,16 +1,24 @@
-<div class="container">
-  <h2>{{product.title}}</h2>
-  <div class="row">
-  <img class="col col-md col-3" src={{product.image}}>
-    <div class="container shoeContainer">
-      <h5>{{product.description}}</h5>
+
+  <div class="row well">
+    <div class="col-md-6">
+
+        <img src={{product.image}}>
+
+    </div>
+    <div class="col-md-4">
+
+        <h2>{{product.title}}</h2>
+        <h5>{{product.description}}</h5>
+
+    </div>
+    <div class="col-md-2">
+
+        <h3>{{product.cost}}</h3>
+        <button class="btn btn-primary" {{action 'addToCart' product}}>Add to Cart</button>
+
     </div>
   </div>
-  <h4>{{product.cost}}</h4>
-
-  <button class="btn btn-primary" {{action 'addToCart' product}}>Add to Cart</button>
 
   {{review-list product=product}}
-  
+
   {{new-review product=product save2="save3"}}
-</div>

@@ -16,6 +16,10 @@ export default Ember.Route.extend({
       newReview.save().then(function() {
         return product.save();
       });
+    },
+
+    goToCart() {
+      this.transitionTo('cart');
     }
   }
 });

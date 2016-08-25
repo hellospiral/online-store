@@ -7,18 +7,20 @@ export default Ember.Component.extend({
   //
   // actions: {
   //   chooseSortBy(sortingOption) {
-  //     if (sortingOption === 'high-to-low') {
-  //       this.set('sortDesc', true);
-  //       this.set('sortAsc', false);
-  //     } else if (sortingOption === 'low-to-high') {
-  //       this.set('sortAsc', true);
-  //       this.set('sortDesc', false);
-  //     }
+  //     // if (sortingOption === 'high-to-low') {
+  //     //   this.set('sortDesc', true);
+  //     //   this.set('sortAsc', false);
+  //     // } else if (sortingOption === 'low-to-high') {
+  //     //   this.set('sortAsc', true);
+  //     //   this.set('sortDesc', false);
+  //     // }
   //   }
   // },
 
   sortBy: ['rating:desc'],
   sortedReviews: Ember.computed.sort('product.reviews', 'sortBy'),
+  sortByAsc: ['rating'],
+  sortedAscending: Ember.computed.sort('product.reviews', 'sortByAsc'),
 
   averageRating: Ember.computed('product.reviews', function() {
     var reviews = this.get('product.reviews');
@@ -30,7 +32,5 @@ export default Ember.Component.extend({
     return (total / ratingsArray.length).toFixed([1]);
   })
 
-  // sortByAsc: ['rating'],
-  // sortedAscending: Ember.computed.sort('product.reviews', 'sortByAsc')
 
 });
