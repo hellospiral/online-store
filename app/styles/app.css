@@ -41,3 +41,7 @@ body {
 .yellowStars {
   color: #fdec03;
 }
+
+.removeButton {
+  margin-left: 20px;
+}

@@ -16,5 +16,9 @@ export default Ember.Service.extend({
       total += parseInt(allItems[i].get('cost').substr(1));
     }
     this.set('totalDisplay', total);
+  },
+
+  remove(item) {
+    this.get('items').removeObject(item);
   }
 });

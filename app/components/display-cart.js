@@ -12,6 +12,10 @@ export default Ember.Component.extend({
       console.log('toStore ran');
       this.sendAction('toStore');
 
+    },
+
+    removeItem(item) {
+      this.get('shoppingCart').remove(item);
     }
   }
 });
