@@ -1,5 +1,7 @@
+
+
 <ul>
-  {{#each product.reviews as |review|}}
+  {{#each sortedReviews as |review|}}
     <li>"{{review.comment}}" by {{review.username}}. Rating: {{review.rating}}</li>
   {{/each}}
 </ul>
