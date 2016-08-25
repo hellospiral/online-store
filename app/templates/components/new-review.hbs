@@ -1,25 +1,27 @@
-{{#if addNewReview}}
-  <h1>New Review</h1>
-    <div>
-      <form>
-        <div class="form-group">
-          <label for="username">Username</label>
-          {{input class="form-control" value=username id="username"}}
-        </div>
+<div class="container">
+  {{#if addNewReview}}
+    <h1>New Review</h1>
+      <div>
+        <form>
+          <div class="form-group">
+            <label for="username">Username</label>
+            {{input class="form-control" value=username id="username"}}
+          </div>
 
-        <div class="form-group">
-          <label for="comment">Comment</label>
-          {{input class="form-control" value=comment id="comment"}}
-        </div>
+          <div class="form-group">
+            <label for="comment">Comment</label>
+            {{input class="form-control" value=comment id="comment"}}
+          </div>
 
-        <div class="form-group">
-          <label for="rating">Rating</label>
-          {{input class="form-control" value=rating id="rating"}}
-        </div>
+          <div class="form-group">
+            <label for="rating">Rating</label>
+            {{input class="form-control" value=rating id="rating"}}
+          </div>
 
-        <button class="btn btn-primary" {{action 'save1'}}>Save</button>
-      </form>
-    </div>
-{{else}}
-    <button class="btn btn-primary" {{action 'reviewFormShow'}}>New Review</button>
-{{/if}}
+          <button class="btn btn-primary btn-outline" {{action 'save1'}}>Save</button>
+        </form>
+      </div>
+  {{else}}
+      <button class="btn btn-primary btn-outline" {{action 'reviewFormShow'}}>New Review</button>
+  {{/if}}
+</div>

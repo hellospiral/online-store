@@ -7,7 +7,7 @@
       <li class="list-group-item">
         {{product.title}}
         {{edit-product class="crudButtons"product=product edit="edit"}}
-        <button class="btn btn-danger btn-sm crudButtons" {{action 'delete' product}}>Delete</button>
+        <button class="btn btn-danger btn-sm btn-outline crudButtons" {{action 'delete' product}}>Delete</button>
       </li>
     {{/each}}
   </ul>

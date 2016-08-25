@@ -16,6 +16,7 @@ export default Ember.Component.extend({
 
     removeItem(item) {
       this.get('shoppingCart').remove(item);
+      this.get('shoppingCart').total();
     }
   }
 });

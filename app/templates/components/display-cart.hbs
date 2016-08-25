@@ -16,7 +16,7 @@
           <td><h4>{{item.title}}</h4></td>
           <td><h4>{{item.cost}}</h4></td>
           <td>
-            <button class="btn btn-danger btn-sm removeButton" {{action 'removeItem' item}}>Remove</button>
+            <button class="btn btn-danger btn-sm btn-outline removeButton" {{action 'removeItem' item}}>Remove</button>
           </td>
         </tr>
       {{/each}}
@@ -26,12 +26,12 @@
 
   <h2>Total: ${{shoppingCart.totalDisplay}}</h2>
 
-  <button class="btn btn-lg btn-primary">Checkout</button>
+  <button class="btn btn-lg btn-primary btn-outline">Checkout</button>
 
 {{else}}
   <div class="container">
     <h2>There are no items in your cart</h2>
     <h5 class="noItemsText">If your cart is still empty after you’ve added items, it may have something to do with cookies in your browser’s settings. (Strange, we know.) Please enable cookies then try again.</h5>
-    <button {{action 'toStore'}} class="btn btn-primary btn-lg">Keep Shopping</button>
+    <button {{action 'toStore'}} class="btn btn-primary btn-lg btn-outline">Keep Shopping</button>
   </div>
 {{/if}}
