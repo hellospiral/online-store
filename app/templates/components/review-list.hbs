@@ -6,6 +6,9 @@
 }}
   {{item}}
 {{/power-select}} -->
+{{#if product.reviews}}
+  <h3>Average rating: {{averageRating}}</h3>
+{{/if}}
 <ul>
   {{#each sortedReviews as |review|}}
   <li>"{{review.comment}}" by {{review.username}}. Rating: {{review.rating}}

@@ -20,12 +20,15 @@ export default Ember.Component.extend({
   sortBy: ['rating:desc'],
   sortedReviews: Ember.computed.sort('product.reviews', 'sortBy'),
 
-  actions: {
-    formatTimestamp(timestamp) {
-      var date = new Date(timestamp).toString();
-      return date.substr(4,11);
+  averageRating: Ember.computed('product.reviews', function() {
+    var reviews = this.get('product.reviews');
+    var ratingsArray = reviews.getEach('rating');
+    var total = 0;
+    for (var i = 0; i < ratingsArray.length; i++) {
+      total += ratingsArray[i];
     }
-  }
+    return (total / ratingsArray.length).toFixed([1]);
+  })
 
   // sortByAsc: ['rating'],
   // sortedAscending: Ember.computed.sort('product.reviews', 'sortByAsc')

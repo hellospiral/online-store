@@ -9,5 +9,17 @@
     "image": "http://images.finishline.com/is/image/FinishLine/BB1969_BKR_P1?$Main$",
     "description": "Does it get any better than a running shoe that can also be worn as a casual shoe? That is exactly what you get with the Men's adidas NMD Runner Casual Shoes. The two-tone circular knit upper gives you a lightweight, breathable feel, while the full-length Boost midsole with EVA plugs gives your feet comfort unlike anything else. The leather heel tab gives you a premium feel on a running silhouette. With Boost cushioning taking over the sneaker scene you will definitely want to add these to your rotation.",
     "cost": "$120.00"
-  }]
+  },
+  {
+      "title": "Salomon Speedcross 4",
+      "image": "http://a2.zassets.com/images/z/3/5/4/3/4/9/3543497-p-MULTIVIEW.jpg",
+      "description": "Does it get any better than a running shoe that can also be worn as a casual shoe? That is exactly what you get with the Men's adidas NMD Runner Casual Shoes. The two-tone circular knit upper gives you a lightweight, breathable feel, while the full-length Boost midsole with EVA plugs gives your feet comfort unlike anything else. ",
+      "cost": "$110.00"
+    },
+    {
+      "title": "Vans SK8-Hi Slim",
+      "image": "http://a1.zassets.com/images/z/3/5/9/6/1/5/3596154-p-MULTIVIEW.jpg",
+      "description": "the Vans boasts a foot-conforming Flyknit upper, asymmetrical lacing system and full mesh bootie for maximum airflow. Advanced Flywire cables also come to play, providing added support without extra bulk. Fast and free, these running superstars are rounded at the heel for a more natural footstrike, while the low-profile cushioning ensures comfort for the miles ahead. The real standout of this advanced new model is the updated Auxetic tri-star pattern on the sole. Auxetic foam expands when it is stretched, providing a more natural, barefoot-like feel with every step.",
+      "cost": "$100.00"
+    }]
 }
