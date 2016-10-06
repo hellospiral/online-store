@@ -2,6 +2,10 @@
 
 Sneaker Marketplace is an E-Commerce app created in Ember.js. It allows an administrator to add products to their store, edit their attributes, or remove them. Users can browse available items, add them to their shopping cart, remove them, and review products. It uses Firebase and Ember data to implement relational data storage.
 
+## View App on Heroku
+
+You can see the live application on Heroku [here](https://shrouded-shelf-91453.herokuapp.com/store)
+
 ## Project Objectives
 
 * The project contains at least one functioning computed property.
